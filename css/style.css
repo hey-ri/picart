@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600&display=swap');
+/* font-family: 'Orbitron', sans-serif; */
+/* font-family: 'Edu QLD Beginner', cursive; */
+/* font-family: 'Josefin Sans', sans-serif; */
+
+*{margin: 0; padding: 0;}
+ul,ol,li{ list-style: none;}
+a{ text-decoration: none;}
+body{ background: #000;}
+
+header{ width: 350px; height: 100%; background: linear-gradient(0deg, #000000, #000); position: fixed;/* 를 줘야 높이 값이 먹으면서 화면에 보임 */ left: 0; top: 0; box-sizing: border-box; border-right: 1px solid #fff;}
+header h1{ font: bold 50px/1 'Josefin Sans', sans-serif; color: #fff; position: absolute; left: 40px; top: 50%; transform: translateY(-150%);}
+header h1::before{ content: 'WORLDWIDE SHIPPING '; display: block; font: 12px/1 'Josefin Sans', sans-serif; color: #fff; letter-spacing: 2px; position: absolute;/* h1을 기준으로 */ left: 0; top: 70px; opacity: .8; }
+header h1::after{content: ''; display: block; width: 172px; height: 2px; background-color: #fff; margin: 5px 0 0 ;}
+header ul{ position: absolute;/* 헤더 기준으로 */ left: 30px; bottom: 100px;}
+header ul li{ float: left; margin-right: 10px;} 
+header ul li a{ font-size: 20px; color: #fff;}
+header ul li a span{ display: inline-block; font-weight: bold; opacity: .7; transform: scale(.7) translateX(-10px); }
+
+
+main{ margin-left: 350px; box-sizing: border-box; padding: 15px;}
+/* 버튼 */
+main > ul{ width: 100%; margin-bottom: 10px; margin-right: 15px;}
+main >ul::after{ content: ''; display: block; clear: both;}
+main >ul li{ float: right; margin-right: 20px; width: 100px; height: 26px;}
+main >ul li a{ display: block; width: 100%; height: 100%; font: bold 7px/28px 'Josefin Sans', sans-serif; color: #fff; text-align: center; letter-spacing: 1px; border-radius: 2px; box-shadow: 0 0 10px rgba(0,0,0,0.05); background: #000; box-sizing: border-box; border: 1px solid #fff;}
+main >ul li.on a{ background: linear-gradient( 120deg , #ffec97, #e3c100); color: #555; box-shadow: 0 5px 20px rgba(255, 249, 162, 0.527); border: 0;}
+
+main section{ width: 100%;}
+main section::after{ content: ''; display: block; clear: both;}
+main section article{ width: 20%; float: left; box-sizing: border-box; padding: 12px;} 
+main section article div{width: 100%; height: 100%; background: #fff; border-radius: 2px; box-shadow: 5px 5px 10px rgba(0,0,0,0.1); box-sizing: border-box; padding: 14px;}
+main section article div img{ width: 100%;}
+main section article div h2{ margin-top: 15px; font: bold 15px/1 'Josefin Sans', sans-serif; letter-spacing: 1px; color: #444; margin-bottom: 5px;}
+main section article div p{ font: 12px/1.2 'arial'; color: #777; margin-bottom: 15px;}
+main section article div p span{ float: right; font-size: 12px; color: #555; font-weight: 600;}
+
+
+@media screen and (max-width:1599px) {
+    header{ width: 350px;}
+    main{ margin-left: 350px;}
+    main section article{ width: 25%;}
+}
+
+@media screen and (max-width:1199px) {
+    header{ width: 100%; height: 80px; position: relative;}
+    header h1{ font: bold 24px/1 'Josefin Sans', sans-serif; transform: translateY(-50%);}
+    header h1::before, header h1::after{ display: none;}
+    header ul{ left: 83%; bottom: 25px;}
+    header ul li{ margin-right: 20px;}
+    header ul li a span{ display: none;}
+
+    main{ width: 100%; margin-left: 0;}
+    main section article{ width: 25%;}
+}
+
+@media screen and (max-width:899px) {
+    header ul{ left: 80%;}
+
+    main section article{ width: 33.3333%;}
+}
+
+@media screen and (max-width:755px) {
+    header ul{ left: 75%;}
+
+    main section article{ width: 33.3333%;}
+}
+
+@media screen and (max-width:679px) {
+    header ul{ left: 70%;}
+
+    main section article{ width: 50%;}
+}
+
+@media screen and (max-width:539px) {
+    header ul{ display: none;}
+
+    main ul { margin-right: 0; box-sizing: border-box; padding: 0 13px;}
+    main ul li{ margin-right: 2%; width: 32%;}
+    main ul li:nth-of-type(1){margin-right: 0%;}
+
+    main section article{ width: 100%;}
+}
